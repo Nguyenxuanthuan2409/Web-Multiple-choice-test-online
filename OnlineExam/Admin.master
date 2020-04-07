@@ -1,0 +1,152 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="Admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+     <style type="text/css">
+        .style1
+        {
+            
+            width:100%;                 
+            height: 165px;
+        }
+        .style2
+        {
+            
+            margin-left:70px;
+            margin-right:75px;               
+           
+        }
+        .style3
+        {
+            width: 100%;
+            height: 506px;
+        }
+        .style5
+        {            height: 414px;
+        }
+        .style6
+        {
+            height:32px;
+            width: 796px;
+        }
+        .style9
+        {
+            width: 100%;
+            height:35px;
+        }
+        #con
+        {
+            
+            border-radius : 20px;
+            border-top : 15px solid #C8C7CC;
+            border-bottom : 15px solid #C8C7CC;
+            border-left : 1px solid #C8C7CC;
+            border-right: 1px solid #C8C7CC;
+            
+        }
+        .style11
+        {
+            width: 159px;
+        }
+        .style12
+        {
+            width: 157px;
+        }
+        .style13
+        {
+            width: 100px;
+        }
+        .style14
+        {
+            width: 129px;
+        }
+        .textdecor
+        {
+            text-decoration: none;
+        }
+        </style>
+</head>
+<body class="style2">
+    <form id="form1" runat="server">
+     <table class="style1">
+            <tr>
+                <td>
+                    <table  class="style1">
+                        <tr>
+                            <td style="background-color: #33CCFF; background-image: url('/OnlineExam/Images/banner.jpg'); background-repeat: no-repeat;">
+                                &nbsp;</td>
+                        </tr>
+                    </table>
+              
+                </td>
+            </tr>
+        </table>
+        <table class="style6">
+            <tr>
+                <td class="style13" align="left">
+                    <asp:ImageButton ID="ImageButton2" runat="server" 
+                        ImageUrl="~/Images/add_questions.png" PostBackUrl="~/AdminHome.aspx" 
+                        CausesValidation="False" Width="100px" />
+                </td>
+                <td class="style13" align="left">
+                    <asp:ImageButton ID="ImageButton1" runat="server" 
+                        ImageUrl="~/Images/add_subject.png" PostBackUrl="~/AddSubject.aspx" 
+                        CausesValidation="False" Width="100px" />
+                </td>
+                <td class="style13" align="left">
+                    <asp:ImageButton ID="ImageButton3" runat="server" 
+                        ImageUrl="~/Images/deletequestion.png" PostBackUrl="~/Deletequestion.aspx" 
+                        CausesValidation="False" Width="125px" />
+                </td>
+                <td class="style13" align="left">
+                    <asp:ImageButton ID="ImageButton4" runat="server" 
+                        ImageUrl="~/Images/report.png" 
+                        PostBackUrl="~/Reporttest.aspx" CausesValidation="False" Width="100px" />
+                </td>
+                <td class="style14" align="left">
+                    <asp:ImageButton ID="ImageButton5" runat="server" 
+                        ImageUrl="~/Images/test_settings.png" PostBackUrl="~/TestSettings.aspx" 
+                        CausesValidation="False" Width="100px" />
+                </td>
+                <td class="style12" style="width:10px">
+                    &nbsp;</td>
+                <td class="style11" align="right">
+                    <asp:LinkButton ID="lnkLogin" CssClass="textdecor"  runat="server" onclick="lnkLogin_Click" 
+                        ForeColor="#2A75A8">Login</asp:LinkButton>
+                    &nbsp;
+                    <asp:LinkButton ID="lnkLogout" CssClass="textdecor" runat="server" onclick="lnkLogout_Click" 
+                        ForeColor="#2A75A8" CausesValidation="False">Logout</asp:LinkButton>
+                </td>
+            </tr>
+            </table>
+        <table class="style3">
+            <tr>
+                <td class="style5">
+                    <div id= "con">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        </div>
+                </td>
+
+            </tr>
+        
+            </table>
+
+   
+  
+    <table class="style9">
+        <tr>
+            <td bgcolor="#C8C7CC" 
+                style="background-image: url('/OnlineExam/Images/foot.PNG'); background-repeat: no-repeat;">
+                &nbsp;</td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
